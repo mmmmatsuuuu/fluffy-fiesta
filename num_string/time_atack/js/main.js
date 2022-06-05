@@ -2,7 +2,7 @@ import { loadPage } from "./modules/loader.js";
 import { TimeCounter } from "./modules/time.js";
 import { Question } from "./modules/question.js";
 
-const URL = "https://script.google.com/macros/s/AKfycbxIUv3O1a60Ux7bAMkOquZ3ih_9isWicsy_AIBMpGub4JX889Aj2J1oB7bYye6Bsw_Ryw/exec";
+const URL = "https://script.google.com/macros/s/AKfycbyReUWTIUXlkkGHD7MBWqB-9Dfk6LK6v2JRyuf0eI8pNYxXPw_I2OnFcUaYnP4PFaPCwQ/exec";
 
 let questions = [];
 
