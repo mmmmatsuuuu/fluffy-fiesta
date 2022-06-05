@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                colors: {
+                    transparent: 'transparent',
+                    current: 'currentColor',
+                    'background': '#fef6e4',
+                    'stroke': '#001858',
+                    'paragraph': '#172c66',
+                    'main': '#f3d2c1',
+                    'highlight': '#fef6e4',
+                    'secondary': '#8bd3dd',
+                    'tertiary': '#f582ae',
+                },
+                extend: {
+                    keyframes: {
+                        bounce: {
+                            "0%, 100%": { transform: "translateY(-8%)"},
+                            "50%": { transform: "translateY(0)",},
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>練習問題集</title>
+</head>
+<body class="w-screen min-h-screen p-4 bg-secondary">
+    <div class="border-2 border-stroke p-4 rounded bg-highlight mb-4">
+        <h1 class="text-2xl font-bold py-4">練習問題集</h1>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mb-4 bg-highlight border-2 border-stroke rounded p-4">
+        <a 
+            href="./template/mode.html" 
+            class="bg-tertiary border-2 border-stroke rounded-md shadow-lg hover:animate-bounce p-4">
+            <h2 class="text-xl font-black py-4">テンプレート</h2>
+            <p>
+                ここを書き換えてください。
+            </p>
+        </a>
+    </div>
+</body>
+</html>

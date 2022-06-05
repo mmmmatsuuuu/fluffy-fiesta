@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                colors: {
+                    transparent: 'transparent',
+                    current: 'currentColor',
+                    'background': '#fef6e4',
+                    'stroke': '#001858',
+                    'paragraph': '#172c66',
+                    'main': '#f3d2c1',
+                    'highlight': '#fef6e4',
+                    'secondary': '#8bd3dd',
+                    'tertiary': '#f582ae',
+                },
+                extend: {
+                    keyframes: {
+                        bounce: {
+                            "0%, 100%": { transform: "translateY(-8%)"},
+                            "50%": { transform: "translateY(0)",},
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>数値と文字の表現 | 練習問題集</title>
+</head>
+<body class="w-screen min-h-screen p-4 bg-secondary">
+
+    <header class="sticky top-4 p-4 border-2 border-stroke p-4 rounded bg-highlight mb-4 flex justify-end">
+        <a 
+            href="/"
+            class="hover:animate-ping"
+        >
+            問題一覧
+        </a>
+    </header>
+    <div class="border-2 border-stroke p-4 rounded bg-highlight mb-4">
+        <h1 class="text-2xl font-bold py-4">数値と文字の表現</h1>
+        <p>
+            ここを打ち替えてください。
+        </p>
+    </div>
+
+    <div class="border-2 border-stroke p-4 rounded bg-highlight mb-4">
+        <p class="mb-16">
+            モードを選択してください。
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+            <div class="flex justify-center items-center">
+                <a 
+                    href="./time_atack" 
+                    class="bg-tertiary border-2 border-stroke rounded-md shadow-lg hover:animate-bounce p-2 flex flex-col justify-start items-center w-96 h-full"
+                >
+                    <h2 class="text-xl font-black py-4 underline">タイムアタック</h2>
+                    <p>
+                        このモードでは、全ての問題を解き終わるまでの時間を計測します。問題はランダムに出題されます。
+                        <br>
+                        各問題ごとに、正答した問題の難易度とかかった時間ごとにスコアが算出され、その合計が最終的なスコアになります。
+                    </p>
+                </a>
+            </div>
+    
+            <div class="flex justify-center items-center">
+                <a 
+                    href="./quantum_atack" 
+                    class="bg-tertiary border-2 border-stroke rounded-md shadow-lg hover:animate-bounce p-2 flex flex-col justify-start items-center w-96 h-full"
+                >
+                    <h2 class="text-xl font-black py-4 underline">クアンタムアタック</h2>
+                    <p>
+                        このモードでは、時間を設定して、どれだけ問題を解けるかを競います。
+                        <br>
+                        正答した問題の量と難易度でスコアが算出されます。
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
