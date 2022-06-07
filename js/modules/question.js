@@ -1,4 +1,4 @@
-import { Modal } from "./common.js";
+import { Modal, Shuffle } from "./common.js";
 
 export const Question = (q) => {
     const titleArea = document.getElementById("q-title");
@@ -9,7 +9,8 @@ export const Question = (q) => {
 
     const selectArea = document.getElementById("question-selector-area");
     selectArea.innerHTML = "";
-    q.selectors.map((s, idx) => {
+    const sel = Shuffle(q.selectors);
+    sel.map((s, idx) => {
         var sel = select(s, idx);
         selectArea.appendChild(sel);
     });
