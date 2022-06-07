@@ -68,10 +68,15 @@ const selectAnswer = async(btnId) => {
     // 結果の記録
     document.questions[qNum - 1].yourAnswer = value;
     let time = document.getElementById("time-second").innerHTML;
-    if (document.questions[qNum - 2]) {
-        time = time - document.questions[qNum - 2].time;
+    let spanTime = 0;
+    if (document.mytime) {
+        spanTime = time - document.mytime;
+    } else {
+        spanTime = time;
     }
-    document.questions[qNum - 1].time = time;
+    document.mytime = time;
+
+    document.questions[qNum - 1].time = spanTime;
     if (correct) {
         document.questions[qNum - 1].score = document.questions[qNum - 1].level / time * 100;
     } else {
