@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                colors: {
+                    transparent: 'transparent',
+                    current: 'currentColor',
+                    'background': '#fef6e4',
+                    'stroke': '#001858',
+                    'paragraph': '#172c66',
+                    'main': '#f3d2c1',
+                    'highlight': '#fef6e4',
+                    'secondary': '#8bd3dd',
+                    'tertiary': '#f582ae',
+                },
+                extend: {
+                    keyframes: {
+                        bounce: {
+                            "0%, 100%": { transform: "translateY(-8%)"},
+                            "50%": { transform: "translateY(0)",},
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>テンプレート | ランキング</title>
+</head>
+<body id="q-body" class="w-screen min-h-screen p-4 bg-secondary">
+
+    <header class="sticky top-4 p-4 border-2 border-stroke p-2 rounded bg-highlight mb-4 flex justify-between">
+        <h1 class="text-2xl font-bold py-4">練習問題集</h1>
+        <a 
+            href="/fluffy-fiesta/"
+            class="border-2 border-stroke p-4 px-8 rounded-md bg-secondary shadow-lg hover:animate-bounce font-black text-center"
+        >
+            問題一覧
+        </a>
+    </header>
+    <div class="border-2 border-stroke p-4 rounded bg-highlight mb-4">
+        <h1 class="bg-main text-2xl font-bold border-l-4 border-tertiary p-2 mb-2">テンプレート</h1>
+        <p>
+            ここを打ち替えてください。
+        </p>
+    </div>
+
+    <div class="border-2 border-stroke p-4 rounded bg-highlight mb-4">
+        <h2 class="mb-8 bg-main text-5xl font-bold text-center p-2">
+            👑ランキング👑
+        </h2>
+        <table class="w-full border-collapse">
+            <thead class="w-full">
+                <tr class="w-full border-b">
+                    <th class="w-1/5 ">順位</th>
+                    <th class="w-2/5 ">ニックネーム</th>
+                    <th class="w-2/5 ">スコア</th>
+                </tr>
+            </thead>
+            <tbody
+                id="t-body"
+            >
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/tRanking.js" type="module"></script>
+</body>
+</html>

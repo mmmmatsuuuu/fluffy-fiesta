@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                colors: {
+                    transparent: 'transparent',
+                    current: 'currentColor',
+                    "white": "#ffffff",
+                    'background': '#fef6e4',
+                    'stroke': '#001858',
+                    'paragraph': '#172c66',
+                    'main': '#f3d2c1',
+                    'highlight': '#fef6e4',
+                    'secondary': '#8bd3dd',
+                    'tertiary': '#f582ae',
+                },
+                extend: {
+                    keyframes: {
+                        bounce: {
+                            "0%, 100%": { transform: "translateY(-8%)"},
+                            "50%": { transform: "translateY(0)",},
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>タイムアタック | 練習問題集</title>
+</head>
+
+<body 
+    id="q-body"
+    class="w-screen min-h-screen p-4 bg-secondary"
+>
+    <div 
+        id="time-area"
+        class="border-2 border-stroke p-4 rounded bg-highlight mb-4 text-xl"
+    >
+        経過時間
+    </div>
+    <div
+        id="time-second"
+        class="invisible"
+    ></div>
+
+    <div 
+        id="question-article-area"
+        class="border-2 border-stroke p-4 rounded bg-highlight mb-4"
+    >
+        <h1 
+            id="q-title"
+            class="text-2xl font-bold py-4"
+        >
+            問題. 1
+        </h1>
+        <p 
+            id="q-paragraph"
+            class="pb-4"
+        >
+            ここに問題文が入る。
+        </p>
+    </div>
+    
+    <div 
+        id="question-selector-area"
+        class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mb-4 bg-highlight border-2 border-stroke rounded p-4"
+    >
+        <div class="flex justify-center items-center">
+            <button 
+                id="choice-1"
+                onclick=""
+                class="bg-tertiary border-2 border-stroke rounded-md shadow-lg hover:animate-bounce p-2 flex flex-col justify-start items-center w-96 h-full"
+            >
+                <p class="text-xl font-black py-4">
+                    選択肢1
+                </p>
+            </button>
+        </div>
+
+        <div class="flex justify-center items-center">
+            <button 
+                id="choice-2"
+                onclick=""
+                class="bg-tertiary border-2 border-stroke rounded-md shadow-lg hover:animate-bounce p-2 flex flex-col justify-start items-center w-96 h-full"
+            >
+                <p class="text-xl font-black py-4">
+                    選択肢2
+                </p>
+            </button>
+        </div>
+
+        <div class="flex justify-center items-center">
+            <button 
+                id="choice-3"
+                onclick=""
+                class="bg-tertiary border-2 border-stroke rounded-md shadow-lg hover:animate-bounce p-2 flex flex-col justify-start items-center w-96 h-full"
+            >
+                <p class="text-xl font-black py-4">
+                    選択肢3
+                </p>
+            </button>
+        </div>
+
+        <div class="flex justify-center items-center">
+            <button 
+                id="choice-4"
+                onclick=""
+                class="bg-tertiary border-2 border-stroke rounded-md shadow-lg hover:animate-bounce p-2 flex flex-col justify-start items-center w-96 h-full"
+            >
+                <p class="text-xl font-black py-4">
+                    選択肢4
+                </p>
+            </button>
+        </div>
+    </div>
+
+    <div 
+        id="level"
+        class="border-2 border-stroke p-4 rounded bg-highlight mb-4 text-xl"
+    >
+        難易度
+    </div>
+    <footer class="flex justify-end">
+        <a 
+            href="/fluffy-fiesta/"
+            class="border-2 border-stroke p-4 px-8 rounded-md bg-secondary shadow-lg hover:animate-bounce font-black text-center"
+        >
+            問題一覧
+        </a>
+    </footer>
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

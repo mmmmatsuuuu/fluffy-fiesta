@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                colors: {
+                    transparent: 'transparent',
+                    current: 'currentColor',
+                    "white": "#ffffff",
+                    'background': '#fef6e4',
+                    'stroke': '#001858',
+                    'paragraph': '#172c66',
+                    'main': '#f3d2c1',
+                    'highlight': '#fef6e4',
+                    'secondary': '#8bd3dd',
+                    'tertiary': '#f582ae',
+                },
+                extend: {
+                    keyframes: {
+                        bounce: {
+                            "0%, 100%": { transform: "translateY(-8%)"},
+                            "50%": { transform: "translateY(0)",},
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>タイムアタック | 11.数値と文字の表現</title>
+</head>
+
+<body 
+    id="q-body"
+    class="w-screen min-h-screen p-4 bg-secondary"
+>
+    <div 
+        class="border-2 border-stroke p-4 rounded bg-highlight mb-4 flex justify-between items-center"
+    >
+        <h1 class="text-2xl font-black">結果</h1>
+        <a 
+            href="/fluffy-fiesta/"
+            class="border-2 border-stroke p-4 px-8 rounded-md bg-secondary shadow-lg hover:animate-bounce font-black text-center"
+        >
+            問題一覧
+        </a>
+    </div>
+
+
+    <div class="border-2 border-stroke p-4 rounded bg-highlight mb-4">
+        <p class="mb-2">
+            良いスコアが出たらニックネームをつけて登録しよう！ランキングに載るかもしれないよ！
+        </p>
+        <p class="mb-2">
+            個人情報を守るために、ニックネームに本名などは使わないようにしよう！
+        </p>
+        <form
+            id="form"
+            method="post"
+            action="https://script.google.com/macros/s/AKfycbwNp2dgeXr6pIWklQ8deL1raFp4EIoBqBllJ2dWBrBLmPzmc1wvaXQzFO4XqrfKAN-A8g/exec"
+        >
+            <table class="mb-2">
+                <tbody class="text-xl font-bold">
+                    <tr>
+                        <td><label for="score">合計スコア </label></td>
+                        <td><input id="score" type="text" name="score" readonly></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">ニックネーム </label></td>
+                        <td><input id="name" type="text" name="name"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="hidden" name="mode" value="t">
+            <button
+                id="submit"
+                class="bg-tertiary border-2 border-stroke p-4 rounded w-full shadow hover:shadow-lg"
+                type="button"
+            >登録</button>
+        </form>
+    </div>
+
+    <div 
+        id="result-area"
+        class="border-2 border-stroke p-4 rounded bg-highlight mb-4"
+    >
+    </div>
+
+    <script src="js/result.js" type="module"></script>
+</body>
+</html>
