@@ -1,7 +1,7 @@
 import { LoadRank } from "../../js/modules/loader.js";
 import { makeRankingTable } from "../../js/modules/tRank.js";
 
-const URL = "https://script.google.com/macros/s/AKfycbwOxp6yWjVyw-I-mgLmZ75-yqvkOc54yLWvuTdU-x31vQKI0P2_T5LaxlKtqcO0luTwSw/exec?mode=tr";
+const URL = "https://script.google.com/macros/s/AKfycbwZZmoFlujecnpknFPoMRiidnzuD9rTZM3trAM27y1_FepD9N5uvQtVXwaymj48-xon/exec?mode=tr";
 
 let rank = [];
 

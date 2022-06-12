@@ -6,6 +6,12 @@ export const Question = (q) => {
 
     const pArea = document.getElementById("q-paragraph");
     pArea.innerHTML = q.paragraph;
+    if (q.paragraph_img) {
+        const pImg = document.createElement("img");
+        pImg.src = q.paragraph_img;
+        pImg.alt = "問題画像";
+        pArea.appendChild(pImg);
+    }
 
     const selectArea = document.getElementById("question-selector-area");
     selectArea.innerHTML = "";

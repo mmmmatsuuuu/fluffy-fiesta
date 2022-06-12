@@ -1,5 +1,5 @@
-import { Modal } from "../../../js/modules/common.js";
-import { MyRound } from "../../../js/modules/common.js";
+import { Modal } from "./common.js";
+import { MyRound } from "./common.js";
 
 document.addEventListener("DOMContentLoaded", function() {
     let total = 0;
@@ -129,6 +129,12 @@ const result = (q) => {
     tr.appendChild(td);
     var td = document.createElement("td");
     td.innerHTML = q.explanation;
+    if (q.explanation_img) {
+        var img = document.createElement("img");
+        img.src = q.explanation_img;
+        img.alt = "解説画像";
+        td.appendChild(img);
+    }
     tr.appendChild(td);
     tbody.appendChild(tr);
 
